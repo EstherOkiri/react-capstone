@@ -1,4 +1,4 @@
-
+import Apply from "./JobApplication"
 
 function JobView(){
 
