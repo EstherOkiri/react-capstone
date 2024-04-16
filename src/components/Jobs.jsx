@@ -1,4 +1,4 @@
-
+import JobView from "./JobView"
 
 function Jobs(){
 
