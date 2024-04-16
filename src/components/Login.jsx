@@ -1,4 +1,4 @@
-
+import SignUp from "./SignUp"
 
 function Login(){
 
@@ -12,7 +12,7 @@ function Login(){
                 <input type="password" placeholder="password" />
             </form>
             <h4>Don't Have An Account?</h4>
-            <button>Sign Up</button>
+            <button><a href="/SignUp.jsx"></a>Sign Up</button>
         
         </>
     )
