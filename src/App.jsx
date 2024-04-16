@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Login from './components/Login'
 import Footer from './components/footer'
+import Jobs from './components/Jobs'
 
 function App() {
   
@@ -10,6 +11,8 @@ function App() {
     <>
       <Navbar/>
       <Login />
+      <Jobs />
+      
       
     </>
   )
