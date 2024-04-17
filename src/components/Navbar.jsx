@@ -5,7 +5,7 @@ function Navbar(){
 
     return(
         <>
-            <nav>
+            <nav className='nav-bar'>
                 <div> 
                     <p>Hunt logo</p>
                 </div>
