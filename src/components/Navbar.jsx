@@ -5,12 +5,12 @@ function Navbar(){
 
     return(
         <>
-            <nav className='nav-bar'>
+            <nav className='flex items-center justify-between bg-customColor p-7'>
                 <div> 
                     <p>Hunt logo</p>
                 </div>
-                <div>
-                    <Link to="/">Log In</Link>
+                <div className='flex items-center '>
+                    <Link to="/" className='mr-3'>Log In</Link>
                     <Link to="/Jobs">Jobs</Link>
                     
                 </div>

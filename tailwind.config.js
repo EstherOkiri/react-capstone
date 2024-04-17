@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        customColor: '#49C5B6'
+      }      
       
     },
   },
