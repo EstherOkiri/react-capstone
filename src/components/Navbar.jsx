@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 
 
 function Navbar(){
@@ -10,8 +10,8 @@ function Navbar(){
                     <p>Hunt logo</p>
                 </div>
                 <div className="flex-1">
-                    <a href="">Jobs</a>
-                    <a href="">Employers</a>
+                    <Link to="/jobs">Jobs</Link>
+                    <Link to="/Employers">Employers</Link>
                 </div>
             </nav>
             
