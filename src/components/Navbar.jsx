@@ -5,13 +5,14 @@ function Navbar(){
 
     return(
         <>
-            <nav className="flex">
-                <div className="flex-1"> 
+            <nav>
+                <div> 
                     <p>Hunt logo</p>
                 </div>
-                <div className="flex-1">
-                    <Link to="/jobs">Jobs</Link>
-                    <Link to="/Employers">Employers</Link>
+                <div>
+                    <Link to="/Login">Log In</Link>
+                    <Link to="/Jobs">Jobs</Link>
+                    
                 </div>
             </nav>
             
