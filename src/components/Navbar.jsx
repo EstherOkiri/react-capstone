@@ -10,7 +10,7 @@ function Navbar(){
                     <p>Hunt logo</p>
                 </div>
                 <div>
-                    <Link to="/Login">Log In</Link>
+                    <Link to="/">Log In</Link>
                     <Link to="/Jobs">Jobs</Link>
                     
                 </div>
