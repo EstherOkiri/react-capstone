@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    margin: 0;
+}
+
 h1{
     font-family: Quicksand;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+}
+form{
+    background-color: rgb(245, 245, 245);
+    width: 50rem;
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 18px;
+}
+button{
+    background-color: #49C5B6;
+    margin-left: .8rem;
+    border-radius: .6rem;
+}
+button:hover{
+    background-color: #49c5b76a;
+ 
 }
