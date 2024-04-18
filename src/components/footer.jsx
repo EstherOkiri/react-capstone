@@ -5,10 +5,12 @@ function Footer(){
     return(
 
         <>
-            <div className="footer">
+            <footer className="footer bg-customColor">
+
+                <p className="p-7">Hunt &copy; 2024 Esther Okiri</p>
                 
 
-            </div>
+            </footer>
         
         </>
     )
