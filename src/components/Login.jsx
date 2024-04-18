@@ -1,6 +1,7 @@
 import SignUp from "./SignUp"
 import { useState } from "react"
-
+import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
+import Jobs from "./Jobs";
 
 function Login(){
     const [email, setEmail] = useState('');
@@ -25,6 +26,8 @@ function Login(){
                 const user = userData.find(user => user.email === email);
                 if(!user) {
                     setError('User not found');
+                    //console.log(error);
+                    window.location.href = '/signup';
                     return;
                 }
                 if(user.password !== password){
@@ -32,8 +35,8 @@ function Login(){
                     return;
                 }
                 setError('');
-                console.log('User logged in: ', {email});
-
+                //console.log('User logged in: ', {email});
+                window.location.href = '/jobs';
             })
 
     }
