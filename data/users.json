@@ -1,0 +1,12 @@
+{
+    "users":[
+
+        {
+            "id": 1,
+            "name": "Esther Okiri",
+            "email": "estherokiri@gmail.com",
+            "password": "esther123"
+        }
+
+    ]
+}
