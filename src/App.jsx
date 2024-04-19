@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Login from './components/Login'
 import Footer from './components/Footer'
 import Jobs from './components/Jobs'
+import SignUp from './components/SignUp'
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
           <Switch>
             <Route exact path='/'><Login /></Route>
             <Route exact path='/Jobs'><Jobs /></Route>
+            <Route exact path='/SignUp'><SignUp /></Route>
         </Switch>
+        
         <Footer />
 
       </Router>

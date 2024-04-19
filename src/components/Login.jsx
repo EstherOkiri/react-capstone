@@ -1,6 +1,7 @@
 import SignUp from "./SignUp"
 import { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
+import { Link } from "react-router-dom";
 import Jobs from "./Jobs";
 
 function Login(){
@@ -69,7 +70,7 @@ function Login(){
             </div>
             <div className="p-7 flex items-center justify-center">
                 <h4>Don't Have An Account?</h4>
-                <button ><a href="/SignUp.jsx"></a>Sign Up</button>
+                <button ><Link to="/SignUp">Sign Up</Link></button>
             </div>
             </div>
             
