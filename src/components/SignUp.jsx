@@ -22,7 +22,8 @@ function SignUp(){
             }return response.json();
 
         }).then(data =>{
-            console.log('User added successfully!')
+            console.log('User added successfully!');
+            window.location.href = '/';
         })
 
     }
