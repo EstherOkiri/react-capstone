@@ -1,12 +1,16 @@
 {
-    "users":[
-
-        {
-            "id": 1,
-            "name": "Esther Okiri",
-            "email": "estherokiri@gmail.com",
-            "password": "esther123"
-        }
-
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "Esther Okiri",
+      "email": "estherokiri@gmail.com",
+      "password": "esther123"
+    },
+    {
+      "id": "f164",
+      "name": "John Doe",
+      "email": "johndoe22@gmail.com",
+      "password": "123john"
+    }
+  ]
 }
