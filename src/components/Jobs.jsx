@@ -7,6 +7,11 @@ function Jobs(){
     const [salary, setSalary] = useState(0);
     const [ jobType, setJobType] = useState('');
 
+    //handleSearch
+     const handleSearch = ()=>{
+        
+     }
+
 
     return(
 
@@ -29,7 +34,7 @@ function Jobs(){
                 onChange={(e)=>setLocation(e.target.value)} />
                 <label htmlFor="jobType">Job Type</label>
                 <input type="text" 
-                placeholder="job type"
+                placeholder="Full time,Part time..."
                 name="jobType"
                 id="jobType"
                 value={jobType}
@@ -40,10 +45,8 @@ function Jobs(){
                 name="salary"
                 id="salary"
                 value={salary}
-                onChange={(e)=>setSalary(e.target.value)} />
-                
-
-                <input type="submit" name="searchInput" id="" />
+                onChange={(e)=>setSalary(e.target.value)} />         
+               <button type="submit"> Search</button> 
             </form>
             <h2>Latest Jobs</h2>
         
