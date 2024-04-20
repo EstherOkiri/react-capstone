@@ -6,11 +6,43 @@ function Jobs(){
     const [location, setLocation] = useState('');
     const [salary, setSalary] = useState(0);
     const [ jobType, setJobType] = useState('');
+    const [jobs, setJobs] = useState([]);
+
+    const fetchJobs = ()=>{
+        fetch ('http://localhost:8001/jobs')
+        .then(response =>{
+            if(!response.ok){
+                throw new Error ('Failed to fetch jobs');
+            }
+            return response.json();
+        })
+        .then(data =>{
+            setJobs(data);
+        })
+        .catch(error => {
+            console.error('Error fetching jobs: ', error);
+        });
+    };
 
     //handleSearch
-     const handleSearch = ()=>{
+     const handleSearch = (e)=>{
+        e.preventDefault();
+       //console.log(jobTitle);
+        //console.log(location);
+
+
+        const filteredJobs = jobs.filter(job =>{
+            return job.jobTitle.toLocaleLowerCase().includes(jobTitle.toLocaleLowerCase())||
+            job.location.toLocaleLowerCase().includes(location.toLocaleLowerCase())||
+            job.jobType.toLocaleLowerCase().includes(jobType.toLocaleLowerCase())||
+            job.salary.toString().toLocaleLowerCase().includes(salary.toLocaleLowerCase())       
+        });
+
+        console.log(filteredJobs);
+
         
-     }
+
+     };
 
 
     return(
