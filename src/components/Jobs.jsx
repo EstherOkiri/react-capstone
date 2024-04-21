@@ -39,9 +39,6 @@ function Jobs(){
     }
 
     
-
-   
-
     return(
 
         <>
@@ -77,6 +74,17 @@ function Jobs(){
                 onChange={(e)=>setSalary(e.target.value)} />         
                <button type="submit"> Search</button> 
             </form>
+            <div>
+                <h2>Search Results</h2>
+                {jobs.map((job,index) =>(
+                    <div className="pl-6 pt-6">
+                        <h3 className="font-bold">{job.jobTitle}</h3>
+                        <p>Location : {job.location}</p>
+                        <p>Type : {job.jobType}</p>
+                        <button>See Job</button>
+                    </div>
+                ))}
+            </div>
 
         
         </>
