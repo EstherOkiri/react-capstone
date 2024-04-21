@@ -6,7 +6,18 @@
             "location": "Nairobi",
             "country": "Kenya",
             "jobType": "Full Time",
-            "salary": 50000,
+            "company": "Lorem",
+            "salary": "50000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 2,
+            "jobTitle": "Project Manager",
+            "location": "Mombasa",
+            "country": "Kenya",
+            "jobType": "Full Time",
+            "company": "Ipsum",
+            "salary": "90000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
         
