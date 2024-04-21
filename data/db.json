@@ -19,6 +19,56 @@
             "company": "Ipsum",
             "salary": "90000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 3,
+            "jobTitle": "Operations Officer",
+            "location": "Nairobi",
+            "country": "Kenya",
+            "jobType": "Full Time",
+            "company": "Total Security Surveillance",
+            "salary": "80000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 4,
+            "jobTitle": "Store Keeper",
+            "location": "Mombasa",
+            "country": "Kenya",
+            "jobType": "Full Time",
+            "company": "Consultancy",
+            "salary": "70000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 5,
+            "jobTitle": "School Accountant",
+            "location": "Kisumu",
+            "country": "Kenya",
+            "jobType": "Full Time",
+            "company": "XYZ School",
+            "salary": "75000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 6,
+            "jobTitle": "Head of Sales",
+            "location": "Kisumu",
+            "country": "Kenya",
+            "jobType": "Part Time",
+            "company": "Techno Brain",
+            "salary": "85000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+            "id": 7,
+            "jobTitle": "Software Development Engineer",
+            "location": "Nairobi",
+            "country": "Kenya",
+            "jobType": "Contract",
+            "company": "OpenTech",
+            "salary": "90000",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
         
     ]
