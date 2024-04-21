@@ -19,7 +19,6 @@ function App() {
             <Route exact path='/JobView'><JobView/></Route>
             <Route exact path='/SignUp'><SignUp /></Route>
         </Switch>
-        
         <Footer />
 
       </Router>
