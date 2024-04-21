@@ -2,7 +2,7 @@ import SignUp from "./SignUp"
 import { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
 import { Link } from "react-router-dom";
-import Jobs from "./Jobs";
+
 
 function Login(){
     const [email, setEmail] = useState('');
