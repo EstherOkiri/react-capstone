@@ -4,46 +4,43 @@ import { useState } from "react"
 function Jobs(){
     const [jobTitle, setJobTitle] = useState('');
     const [location, setLocation] = useState('');
-    const [salary, setSalary] = useState(0);
-    const [ jobType, setJobType] = useState('');
+    const [salary, setSalary] = useState('');
+    const [jobType, setJobType] = useState('');
     const [jobs, setJobs] = useState([]);
 
-    const fetchJobs = ()=>{
-        fetch ('http://localhost:8001/jobs')
-        .then(response =>{
-            if(!response.ok){
-                throw new Error ('Failed to fetch jobs');
+    const handleSearch = (e)=> {
+        e.preventDefault();
+
+        //fetch db
+        fetch('http://localhost:8001/jobs')
+        .then(res =>{
+            if(!res.ok){
+                throw new Error('Network error');
             }
-            return response.json();
+            return res.json();
         })
         .then(data =>{
-            setJobs(data);
+            console.log(data);
+            const filteredJobs = data.filter(job => {
+                const jobTitleMatch = job.jobTitle.toLocaleLowerCase().includes(jobTitle.toLocaleLowerCase());
+                const locationMatch = job.location.toLocaleLowerCase().includes(location.toLocaleLowerCase());
+                const jobTypeMatch = job.jobType.toLocaleLowerCase().includes(jobType.toLocaleLowerCase());
+                const salaryMatch = job.salary.toLocaleLowerCase().includes(salary.toLocaleLowerCase());
+                
+                return jobTitleMatch && locationMatch && jobTypeMatch && salaryMatch;
+            })
+            setJobs(filteredJobs);
+            console.log('Jobs set successfuly',filteredJobs);
+            
         })
-        .catch(error => {
-            console.error('Error fetching jobs: ', error);
-        });
-    };
+        .catch(error =>{
+            console.error('There was a problem with fetching data', error)
+        })
+    }
 
-    //handleSearch
-     const handleSearch = (e)=>{
-        e.preventDefault();
-       console.log(jobTitle);
-        //console.log(location);
+    
 
-
-        const filteredJobs = jobs.filter(job =>{
-            return job.jobTitle.toLocaleLowerCase().includes(jobTitle.toLocaleLowerCase())||
-            job.location.toLocaleLowerCase().includes(location.toLocaleLowerCase())||
-            job.jobType.toLocaleLowerCase().includes(jobType.toLocaleLowerCase())||
-            job.salary.toString().toLocaleLowerCase().includes(salary.toLocaleLowerCase())       
-        });
-
-        console.log(filteredJobs);
-
-        
-
-     };
-
+   
 
     return(
 
@@ -73,7 +70,7 @@ function Jobs(){
                 onChange={(e)=>setJobType(e.target.value)} />
                 <label htmlFor="salary">Salary</label>
                 <input type="text" 
-                placeholder="ssalary"
+                placeholder="salary"
                 name="salary"
                 id="salary"
                 value={salary}
