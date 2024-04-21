@@ -27,7 +27,7 @@ function Jobs(){
     //handleSearch
      const handleSearch = (e)=>{
         e.preventDefault();
-       //console.log(jobTitle);
+       console.log(jobTitle);
         //console.log(location);
 
 
@@ -80,7 +80,7 @@ function Jobs(){
                 onChange={(e)=>setSalary(e.target.value)} />         
                <button type="submit"> Search</button> 
             </form>
-            <h2>Latest Jobs</h2>
+
         
         </>
     )
