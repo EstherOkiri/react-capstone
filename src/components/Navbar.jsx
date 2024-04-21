@@ -11,7 +11,7 @@ function Navbar(){
                 </div>
                 <div className='flex items-center '>
                     <Link to="/" className='mr-3'>Log In</Link>
-                    <Link to="/Jobs">Jobs</Link>
+                    <Link to="/JobView">View Jobs</Link>
                     
                 </div>
             </nav>
