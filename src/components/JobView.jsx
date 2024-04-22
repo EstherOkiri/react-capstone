@@ -1,6 +1,4 @@
 import Apply from "./JobApplication"
-import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
-import { Link } from "react-router-dom";
 import { useState } from "react"
 import Jobs from "./Jobs";
 
@@ -8,11 +6,9 @@ import Jobs from "./Jobs";
 
 function JobView(){
 
-    const [jobTitle, setJobTitle] = useState('');
-    const [location, setLocation] = useState('');
-    const [company, setCompany] = useState('');
-    const [salary, setSalary] = useState('');
-    const [description, setDescription] = useState('');
+        const [jobs, setJobs] = useState([]);
+
+
 
     //fetch data
     fetch('http://localhost:8001/jobs')
@@ -23,7 +19,7 @@ function JobView(){
         return res.json();
     })
     .then(data =>{
-        console.log(data);
+        setJobs(data);
     })
     
 
@@ -31,31 +27,29 @@ function JobView(){
 
         <>
             <div>
-                <div>
-                    <h1>Vacancies</h1>
-                    <h4>Location</h4>
-                    <h4>Salary</h4>
-                </div>
-                <div>
-                    <h4>Description</h4>
-                </div>
-                <div>
-                    <h4>Qualifications</h4>
+                <h1>Vacancies</h1>
+                {jobs.map(job =>{
+                    <div key={job.id}>
+                    <h2>{job.jobTitle}</h2>
+                    <p><strong>Location :</strong> {job.location}</p>
+                    <p><strong>Salary :</strong>{job.salary}</p>
+                    <h3><strong>Job Description</strong></h3>
+                    <p>{job.description}</p>
+                    <h3>Qualifications</h3>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
+                        {job.qualifications.map((qualification, index) =>(
+                            <li key = {index}>{qualification}</li>
+                        ))}
                     </ul>
-                </div>
+                    <button>Apply</button>
+                    </div>
+
+                })}
             </div>
-            <button>Apply</button> <br />
-            <Router>
-                <Route exact path = '/Jobs'><Jobs /></Route>
-            </Router>
+           
             
 
-            <button> <Link to="/Jobs">Search More Jobs</Link></button>
+            
 
             
         
