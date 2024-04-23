@@ -39,6 +39,7 @@ function JobView(){
                 {jobs && jobs.map((job => (
                  <div key={job.id} className="p-4 rounded-md border border-customColor hover:shadow-lg transition duration-200">
                  <h2>{job.jobTitle}</h2>
+                 <h3><strong>Company: </strong>{job.company}</h3>
                  <p><strong>Location :</strong> {job.location}</p>
                  <p><strong>Salary :</strong>{job.salary}</p>
                  <h3><strong>Job Description</strong></h3>
