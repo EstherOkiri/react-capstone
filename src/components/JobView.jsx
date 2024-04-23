@@ -1,17 +1,18 @@
 import Apply from "./JobApplication"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Jobs from "./Jobs";
 
 
 
 function JobView(){
 
-        const [jobs, setJobs] = useState([]);
+        const [jobs, setJobs] = useState(null);
 
 
 
     //fetch data
-    fetch('http://localhost:8001/jobs')
+    useEffect (() => {
+        fetch('http://localhost:8001/jobs')
     .then(res =>{
         if(!res.ok){
             throw new Error('Network Error')
@@ -20,32 +21,35 @@ function JobView(){
     })
     .then(data =>{
         setJobs(data);
+        console.log(data);
     })
+    .catch(err =>{
+        console.log(err.message);
+    })
+    },[])
+    
     
 
     return(
 
         <>
+            <h1>Vacancies</h1>
             <div>
-                <h1>Vacancies</h1>
-                {jobs.map(job =>{
-                    <div key={job.id}>
-                    <h2>{job.jobTitle}</h2>
-                    <p><strong>Location :</strong> {job.location}</p>
-                    <p><strong>Salary :</strong>{job.salary}</p>
-                    <h3><strong>Job Description</strong></h3>
-                    <p>{job.description}</p>
-                    <h3>Qualifications</h3>
-                    <ul>
-                        {job.qualifications.map((qualification, index) =>(
-                            <li key = {index}>{qualification}</li>
-                        ))}
-                    </ul>
-                    <button>Apply</button>
-                    </div>
-
-                })}
+            {jobs && jobs.map((job => (
+                 <div key={job.id}>
+                 <h2>{job.jobTitle}</h2>
+                 <p><strong>Location :</strong> {job.location}</p>
+                 <p><strong>Salary :</strong>{job.salary}</p>
+                 <h3><strong>Job Description</strong></h3>
+                 <p>{job.description}</p>
+                 <button>Apply</button>
+                 </div>
+              )))}
             </div>
+            
+                
+              
+            
            
             
 
@@ -58,3 +62,4 @@ function JobView(){
 }
 
 export default JobView
+
