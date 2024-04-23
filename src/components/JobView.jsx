@@ -34,9 +34,10 @@ function JobView(){
 
         <>
             <h1>Vacancies</h1>
-            <div>
-            {jobs && jobs.map((job => (
-                 <div key={job.id}>
+            <div className="p-7  ">
+                <div className="grid grid-cols-2 gap-4 ">
+                {jobs && jobs.map((job => (
+                 <div key={job.id} className="p-4 rounded-md border border-customColor hover:shadow-lg transition duration-200">
                  <h2>{job.jobTitle}</h2>
                  <p><strong>Location :</strong> {job.location}</p>
                  <p><strong>Salary :</strong>{job.salary}</p>
@@ -45,6 +46,8 @@ function JobView(){
                  <button>Apply</button>
                  </div>
               )))}
+                </div>
+            
             </div>
             
                 
