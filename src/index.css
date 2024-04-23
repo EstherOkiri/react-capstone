@@ -2,11 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    margin: 0;
-}
 
-h1{
+h1, h2{
     font-family: Quicksand;
     text-align: center;
     font-size: 2rem;
@@ -22,11 +19,14 @@ form{
 }
 button{
     background-color: #49C5B6;
-    margin-left: .8rem;
-    border-radius: .6rem;
+    border-radius: .2rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: .7rem;
 }
 button:hover{
     background-color: #49c5b76a;
+    font-weight: normal;
 }
 input{
     background-color: white;
