@@ -1,4 +1,5 @@
 import { useState } from "react"
+import background from '../assets/signup-bg.jpg'
 
 function SignUp(){
     const [email, setEmail] = useState('');
@@ -31,19 +32,24 @@ function SignUp(){
     return(
 
         <>
-            <div>
+            <div className="login-container" style={{backgroundImage: `url(${background})`,
+                backgroundSize: 'cover', backgroundPosition: 'right'}}>
                 <h1>Sign Up</h1>
+                <div className="flex items-center justify-center">
                 <form onSubmit={handleAddUser}action="">
                     <label htmlFor="name">Full Name : </label>
                     <input type="text" 
                     placeholder="John Doe" 
                     value={name}
+                    required
                     id="name"
                     onChange={(e)=>setName(e.target.value)}/>
+
                     <label htmlFor="email">Email</label>
                     <input type="text" 
                     placeholder="johndoe1122@gmail.com" 
                     value={email}
+                    required
                     id="email"
                     onChange={(e)=>setEmail(e.target.value)}/>
                     <label htmlFor="password">Password</label>
@@ -53,6 +59,8 @@ function SignUp(){
                     onChange={(e)=>setPassrord(e.target.value)}></input>
                     <button type="submit">Sign Up</button>
                 </form>
+                </div>
+                
             </div>
         
         </>
