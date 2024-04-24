@@ -45,7 +45,7 @@ function JobView(){
                             <p><strong>Salary :</strong>{job.salary}</p>
                             <h3><strong>Job Description</strong></h3>
                             <p>{job.description}</p>
-                            <button ><Link to="/Apply">Apply</Link></button>
+                            <button ><Link to={{pathname: "/Apply", state: {jobTitle: job.jobTitle}}}>Apply</Link></button>
                             
                             </div>
                         )))}
