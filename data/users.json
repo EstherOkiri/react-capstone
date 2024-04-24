@@ -4,18 +4,21 @@
       "id": "1",
       "name": "Esther Okiri",
       "email": "estherokiri@gmail.com",
+      "gender": "female",
       "password": "esther123"
     },
     {
       "id": "f164",
       "name": "John Doe",
       "email": "johndoe22@gmail.com",
+      "gender": "male",
       "password": "123john"
     },
     {
       "id": "62e0",
       "name": "Jane Doe",
       "email": "janedoe",
+      "gender": "female",
       "password": "jane123"
     }
   ]
