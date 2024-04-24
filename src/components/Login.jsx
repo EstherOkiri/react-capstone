@@ -28,12 +28,14 @@ function Login(){
                 const user = userData.find(user => user.email === email);
                 if(!user) {
                     setError('User not found');
+                    alert('User not found!')
                     //console.log(error);
                     window.location.href = '/signup';
                     return;
                 }
                 if(user.password !== password){
                     setError('Incorrect password');
+                    alert('Incorrect Password')
                     return;
                 }
                 setError('');
@@ -74,7 +76,7 @@ function Login(){
                 </div>
             </div>
             <div className="p-7 flex items-center justify-center">
-                <h4>Don't Have An Account?</h4>
+                <h4 className="text-white">Don't Have An Account?</h4>
                 <button ><Link to="/SignUp">Sign Up</Link></button>
             </div>
             </div>
