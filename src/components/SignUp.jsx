@@ -4,6 +4,7 @@ import background from '../assets/signup-bg.jpg'
 function SignUp(){
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const [gender, setGender ] = useState('');
     const [password, setPassrord] = useState('');
     const [users,setUsers] = useState([]);
 
@@ -51,7 +52,16 @@ function SignUp(){
                     value={email}
                     required
                     id="email"
-                    onChange={(e)=>setEmail(e.target.value)}/>
+                    onChange={(e)=>setEmail(e.target.value)}/> <br />
+
+                    <label htmlFor="gender">Gender</label>
+                    <input type="text" 
+                    placeholder="Male/Female" 
+                    value={gender}
+                    required
+                    id="gender"
+                    onChange={(e)=>setGender(e.target.value)}/>
+
                     <label htmlFor="password">Password</label>
                     <input type="password"
                     value={password}
