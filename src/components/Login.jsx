@@ -2,6 +2,7 @@ import SignUp from "./SignUp"
 import { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from  "react-router-dom"
 import { Link } from "react-router-dom";
+import background from '../assets/login-bg.jpg'
 
 
 function Login(){
@@ -37,7 +38,7 @@ function Login(){
                 }
                 setError('');
                 //console.log('User logged in: ', {email});
-                window.location.href = '/jobs';
+                window.location.href = '/jobView';
             })
 
     }
@@ -45,11 +46,13 @@ function Login(){
     return(
 
         < >
-            <div className="bg-loginbg">
-            <div className="p-7" style={{backgroundImage: 'url("/assets/login-bg.jpg")'}}>
+            <div className="loginbg">
+            <div className="p-7" >
+                {/* //style={{backgroundImage: 'url("/assets/login-bg.jpg")'}} */}
                 <h1>Log In</h1>
-                <form onSubmit={handleSubmit} action="" className="flex items-center justify-center">
-                    <label htmlFor="email" className="font-semibold p-2">Email :</label><br />
+                <div className="flex items-center justify-center">
+                <form onSubmit={handleSubmit} action="" >
+                    <label htmlFor="email" className="font-semibold p-2">Email :</label>
                     <input type="text"  
                     placeholder="email" 
                     name="email" 
@@ -67,6 +70,7 @@ function Login(){
                     onChange={(e)=>setPassrord(e.target.value)}/>
                     <button type="submit" className="font-semibold p-2">Log In</button>
                 </form>
+                </div>
             </div>
             <div className="p-7 flex items-center justify-center">
                 <h4>Don't Have An Account?</h4>
