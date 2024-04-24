@@ -19,25 +19,28 @@ function Apply(){
             <h1>Job Application Form</h1>
             <div className="flex items-center justify-center">
                 <form action="">
-                    <label htmlFor="Full name">Full Name</label>
+                    <label htmlFor="Full name" >Full Name</label> <br />
                     <input type="text"
                     placeholder="Full name"
                     name="fullName"
                     id="fullName"
                     value={fullName}
-                    onChange={(e)=>setFullName(e.target.value.toLocaleLowerCase())}/>
+                    onChange={(e)=>setFullName(e.target.value.toLocaleLowerCase())}
+                    className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-customColor"/>
 
                     <label htmlFor="jobTitle">Job Applied For</label>
                     <input type="text" 
                     name="jobTitle" 
                     id="jobTitle"
                     value={jobTitle}
-                    onChange={(e) => setJobTitle(e.target.value.toLocaleLowerCase())} />
+                    onChange={(e) => setJobTitle(e.target.value.toLocaleLowerCase())}
+                    className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-customColor" />
 
                     <label htmlFor="resume">Upload Your Resume</label>
                     <input type="file"
                     id="resume"
-                    accept=".pdf" />
+                    accept=".pdf" 
+                    className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:border-customColor"/>
 
                     <button type="submit">Apply</button>
                 </form>
