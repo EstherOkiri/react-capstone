@@ -46,10 +46,11 @@ function Login(){
     return(
 
         < >
-            <div className="loginbg">
+            <div className="login-container" style={{backgroundImage: `url(${background})`,
+                backgroundSize: 'cover', backgroundPosition: 'right'}}>
             <div className="p-7" >
-                {/* //style={{backgroundImage: 'url("/assets/login-bg.jpg")'}} */}
-                <h1>Log In</h1>
+                
+                <h1 className="text-white">Log In</h1>
                 <div className="flex items-center justify-center">
                 <form onSubmit={handleSubmit} action="" >
                     <label htmlFor="email" className="font-semibold p-2">Email :</label>
