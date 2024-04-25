@@ -5,12 +5,11 @@ import { Link } from "react-router-dom";
 import background from '../assets/login-bg.jpg'
 
 
-function Login(){
+function Login({}){
     const [email, setEmail] = useState('');
     const [password, setPassrord] = useState('');
-    const [logStatus, setLogStatus] = useState('false');
     const [error, setError] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false);
+   
 
     const handleSubmit=(event) =>{
         event.preventDefault();
@@ -42,7 +41,7 @@ function Login(){
                 setError('');
                 //console.log('User logged in: ', {email});
                 window.location.href = '/jobView';
-                setLoggedIn(true);
+                
             })
 
     }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 
-function Navbar(){
+function Navbar({isLoggedIn}){
 
     return(
         <>

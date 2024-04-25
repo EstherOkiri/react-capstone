@@ -5,7 +5,7 @@ function SignUp(){
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [gender, setGender ] = useState('');
-    const [password, setPassrord] = useState('');
+    const [password, setPassword] = useState('');
     const [users,setUsers] = useState([]);
 
     const handleAddUser = (event) =>{
